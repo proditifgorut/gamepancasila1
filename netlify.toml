@@ -1,0 +1,15 @@
+# Netlify configuration for a Vite-based React Single-Page Application
+
+[build]
+  # Command to build the site
+  command = "yarn build"
+  
+  # Directory where the built files are located
+  publish = "dist"
+
+# Redirect rule for Single-Page Application (SPA) routing
+# This ensures that all paths are served by index.html, allowing React Router to handle them.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
